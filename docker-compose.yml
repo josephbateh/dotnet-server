@@ -1,6 +1,7 @@
 version: "3"
 services:
   server:
+    container_name: dotnetserver
     image: "josephbateh/dotnet-server"
     ports:
       - "80:80"
