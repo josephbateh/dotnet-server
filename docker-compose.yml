@@ -1,0 +1,6 @@
+version: "3"
+services:
+  server:
+    image: "josephbateh/dotnet-server"
+    ports:
+      - "80:80"
