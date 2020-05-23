@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "cluster"
+    labels:
+        app: "cluster"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: cluster5c06-cluster.f345406f8cec4936bcb0.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "cluster"
+                servicePort: 80
