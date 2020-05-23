@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "cluster"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "cluster"
+    spec:
+      containers:
+        - name: "cluster"
+          image: "jcbk8sregistry.azurecr.io/cluster"
+          ports:
+          - containerPort: 80
